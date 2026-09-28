@@ -1,0 +1,22 @@
+# Render Blueprint. Persistent disk ke liye paid plan (starter) zaruri hai.
+services:
+  - type: web
+    name: wa-gemini-bot
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PHONE_NUMBER
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: WEB3FORMS_KEY
+        sync: false
+      - key: TZ
+        value: Asia/Kolkata

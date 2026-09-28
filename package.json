@@ -1,0 +1,14 @@
+{
+  "name": "wa-gemini-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": { "start": "node index.js" },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@whiskeysockets/baileys": "^6.7.9",
+    "express": "^4.19.2",
+    "node-cron": "^3.0.3",
+    "pino": "^9.0.0",
+    "qrcode": "^1.5.4"
+  }
+}
